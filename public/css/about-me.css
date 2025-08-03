@@ -1,0 +1,104 @@
+/* Общие стили секции */
+#about-me {
+    background-color: #FDF4E7  ; /* Кремовый фон */
+    padding: 5rem 0;
+}
+
+.container-about-me {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+/* Стили заголовка */
+.section-title {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #16511B;
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 2rem;
+    padding-left: 0;
+    letter-spacing: 1px;
+}
+
+/* Стили списка */
+.about-text ul {
+    list-style-type: none;
+    padding-left: 2rem; /* Увеличил отступ списка */
+}
+
+.about-text li {
+    font-family: 'Lora', serif;
+    color: #16511B; /* Новый цвет - глубокий зелено-серый */
+    font-size: 1.4rem; /* Увеличил размер шрифта */
+    margin-bottom: 1.2rem; /* Увеличил отступ между пунктами */
+    line-height: 1.7; /* Увеличил межстрочный интервал */
+    position: relative;
+    padding-left: 2.5rem; /* Увеличил отступ для маркера */
+}
+
+/* Кастомные маркеры */
+.about-text li:before {
+    content: "★";
+    color: #1B5E20; /* Цвет маркера */
+    font-size: 1.1rem; /* Размер маркера */
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+}
+
+
+/* Расположение контента */
+.about-content {
+    display: flex;
+    flex-direction: row-reverse; /* Меняем порядок - теперь фото справа */
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.about-text {
+    text-align: justify; /* Выравнивание по ширине */
+    hyphens: auto; /* Перенос слов при необходимости */
+    text-justify: inter-word; /* Оптимальное выравнивание */
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    text-align: left; /* Выравниваем фото по правому краю */
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили списка (оставляем как было) */
+.about-text ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about-text li {
+    font-family: 'Lora', serif;
+    color: #333;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
