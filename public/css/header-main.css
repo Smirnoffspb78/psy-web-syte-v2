@@ -1,0 +1,83 @@
+header.main-header {
+    background: rgba(255, 255, 255, 0.8) url('../static/start6.png');
+    background-blend-mode: lighten;
+    background-size: cover;
+    background-position: center;
+    color: #16511B  ; /* Темно-зеленый цвет */
+    padding: 4rem 2rem;
+    text-align: center; /* Текст по центру */
+    position: relative;
+}
+
+header.main-header .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header.main-header h1 {
+    font-family: 'Marcellus', serif; /* Очень элегантный шрифт */
+    font-weight: 400; /* Чуть легче чем bold */
+    font-size: 3rem;
+    line-height: 1.3; /* Чуть больше межстрочный интервал */
+    margin-bottom: 1rem;
+    letter-spacing: 2px; /* Добавляем немного буквенного spacing */
+}
+
+header.main-header .tagline {
+    font-family: 'Lora', serif; /* Утонченный шрифт с засечками */
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #16511B; /* Темно-зеленый */
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #16511B; /* Темно-зеленый */
+    color: white;
+    padding: 14px 28px; /* Чуть больше padding */
+    text-decoration: none;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 0; /* Без скруглений */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Анимируем все свойства */
+    letter-spacing: 1.5px; /* Добавляем немного буквенного spacing */
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background-color: #2a6b54; /* Светлее при наведении */
+    transform: translateY(-2px); /* Легкий эффект поднятия */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Тень при наведении */
+}
+
+.more-button {
+    display: inline-block;
+    background-color: white; /* Белый фон вместо прозрачного */
+    color: #16511B; /* Цвет текста как в основном стиле */
+    padding: 14px 28px;
+    text-decoration: none;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    border: 2px solid #16511B; /* Зеленая рамка */
+    border-radius: 0; /* Без скруглений */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1rem 0.5rem 0;
+    letter-spacing: 1.5px;
+}
+
+.more-button:hover {
+    background-color: #f8f8f8; /* Слегка затемненный белый при наведении */
+    color: #16511B; /* Чуть темнее зеленый для текста */
+    border-color: #16511B; /* Чуть темнее рамка */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

@@ -76,3 +76,13 @@ footer.main-footer {
     text-align: center;
     padding: 1rem;
 }
+
+.buttons-wrapper {
+    margin-left: 0; /* Выравниваем по левому краю текста */
+    margin-right: auto;
+}
+
+/* Обновите margin у кнопок */
+.cta-button, .more-button {
+    margin: 0; /* Убираем прежние отступы */
+}
