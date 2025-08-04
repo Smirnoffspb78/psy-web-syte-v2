@@ -1,0 +1,132 @@
+/* Стили для секции "С чем работаю?" */
+#help {
+    background-color: #FDF4E7; /* Кремовый фон */
+    padding: 5rem 0;
+}
+
+.help-container {
+    max-width: 1400px; /* Максимальная ширина */
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+#help h2 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #16511B;
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    font-weight: 600;
+    color: #1B5E20;
+}
+
+.requests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Ширина учитывает иконки */
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Стили для ящиков с иконками */
+.request-box {
+    display: flex;
+    align-items: flex-start;
+    background-color: #FDF4E7;
+    padding: 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    gap: 1.5rem;
+}
+
+/* Стили для иконок */
+.box-icon {
+    flex: 0 0 50px; /* Фиксированная ширина */
+    color: #1B5E20; /* Цвет иконок */
+    font-size: 2.3rem;
+    padding-top: 0.3rem;
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+/* Стили для текста */
+.box-text {
+    flex: 1;
+    font-family: 'Lora', serif;
+    color: black;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+/* Эффекты при наведении */
+.request-box:hover {
+    background-color: #FDF4E7;
+}
+
+.request-box:hover .box-icon {
+    transform: scale(1.1); /* Увеличение иконки */
+    color: #2a6b54; /* Изменение цвета */
+}
+
+.requests-outro {
+    font-family: 'Lora', serif;
+    color: #16511B;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.requests-outro a {
+    color: #16511B;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.requests-outro a:hover {
+    color: #2a6b54;
+}
+
+.family-icon {
+    position: relative;
+    width: 45px;
+    height: 30px;
+}
+.family-icon i {
+    position: absolute;
+}
+.family-icon .fa-female {
+    left: 5px;
+    font-size: 1.4rem;
+    color: #e91e63;
+}
+.family-icon .fa-child {
+    right: 5px;
+    top: 8px;
+    font-size: 1.2rem;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .help-container {
+        padding: 0 1.5rem;
+    }
+
+    #help h2 {
+        font-size: 2.5rem;
+    }
+
+    .requests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .box-icon {
+        flex: 0 0 40px;
+        font-size: 1.5rem;
+    }
+
+    .box-text {
+        font-size: 1.1rem;
+    }
+}
