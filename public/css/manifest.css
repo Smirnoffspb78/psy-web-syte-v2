@@ -54,6 +54,18 @@
     text-justify: inter-word; /* Для лучшего распределения слов */
 }
 
+/* Стили для заголовков ящиков */
+.box-title {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #1B5E20;
+    font-size: 1.8rem;
+    margin: 0 0 1.5rem 0;
+    text-align: left;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(27, 94, 32, 0.2);
+}
+
 /* Адаптация для мобильных */
 @media (max-width: 768px) {
     .boxes-row {
