@@ -5,7 +5,7 @@
 }
 
 .manifesto-boxes {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -47,9 +47,11 @@
 .box-content p {
     font-family: 'Lora', serif;
     color: #16511B;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 1.6;
     margin: 0;
+    text-align: justify; /* Выравнивание по ширине */
+    text-justify: inter-word; /* Для лучшего распределения слов */
 }
 
 /* Адаптация для мобильных */
