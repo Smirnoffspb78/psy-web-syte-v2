@@ -1,0 +1,114 @@
+/* Стили для раздела "Формат работы" */
+#form-work {
+    background-color: #F5F5F5; /* Светло-серый фон */
+    padding: 5rem 0;
+}
+
+.form-work-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+#form-work h1 {
+    font-family: 'Lora', serif;
+    color: #16511B;
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.form-work-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.form-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.form-box h2 {
+    font-family: 'Lora', serif;
+    color: #1B5E20;
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    font-weight: 400;
+    border-bottom: 2px solid #F0F0F0;
+    padding-bottom: 0.5rem;
+}
+
+.form-box-content p {
+    font-family: 'Lora', serif;
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.form-box ul {
+    list-style-type: none;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-box li {
+    font-family: 'Lora', serif;
+    color: #16511B;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.form-box li:before {
+    content: "•";
+    color: #1B5E20;
+    position: absolute;
+    left: 0;
+}
+
+.price-item {
+    margin-bottom: 1.5rem;
+}
+
+.price-item h3 {
+    font-family: 'Lora', serif;
+    color: #16511B;
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+.price-item p {
+    font-family: 'Lora', serif;
+    color: #1B5E20;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.conditions {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed #DDD;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .form-work-boxes {
+        grid-template-columns: 1fr;
+    }
+
+    #form-work h1 {
+        font-size: 2.2rem;
+    }
+
+    .form-box h2 {
+        font-size: 1.7rem;
+    }
+}
