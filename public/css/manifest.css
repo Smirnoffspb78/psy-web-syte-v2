@@ -1,0 +1,69 @@
+/* Стили для блока ценностей */
+#manifesto {
+    background-color: #F5F5F5;
+    padding: 4rem 0;
+}
+
+.manifesto-boxes {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.manifesto-boxes h2 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #16511B;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    padding-left: 0;
+    letter-spacing: 1px;
+}
+
+.boxes-row {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.value-box {
+    flex: 1;
+    border-left: 6px solid #1B5E20; /* Жирная левая линия */
+    border-right: 1px solid rgba(27, 94, 32, 0.2); /* Тонкая прозрачная правая */
+    border-top: 1px solid rgba(27, 94, 32, 0.2); /* Тонкая прозрачная верхняя */
+    border-bottom: 1px solid rgba(27, 94, 32, 0.2); /* Тонкая прозрачная нижняя */
+    padding: 1.5rem;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.3); /* Легкая прозрачная заливка */
+    transition: all 0.3s ease;
+}
+
+.value-box:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Эффект при наведении */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.box-content p {
+    font-family: 'Lora', serif;
+    color: #16511B;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .boxes-row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .value-box {
+        padding: 1rem;
+    }
+
+    .manifesto-boxes h2 {
+        font-size: 2rem;
+    }
+}
