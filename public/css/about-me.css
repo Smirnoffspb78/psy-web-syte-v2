@@ -5,7 +5,7 @@
 }
 
 .container-about-me {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 3rem;
 }
@@ -15,7 +15,7 @@
     font-family: 'Lora', serif;
     font-weight: 400;
     color: #16511B;
-    font-size: 3rem;
+    font-size: 2.7rem;
     text-align: left;
     margin-bottom: 2rem;
     padding-left: 0;
@@ -25,17 +25,17 @@
 /* Стили списка */
 .about-text ul {
     list-style-type: none;
-    padding-left: 2rem; /* Увеличил отступ списка */
+    /*padding-left: 2rem; !* Увеличил отступ списка *!*/
 }
 
 .about-text li {
     font-family: 'Lora', serif;
     color: #16511B; /* Новый цвет - глубокий зелено-серый */
-    font-size: 1.4rem; /* Увеличил размер шрифта */
-    margin-bottom: 1.2rem; /* Увеличил отступ между пунктами */
-    line-height: 1.7; /* Увеличил межстрочный интервал */
+    font-size: 1.3rem; /* Увеличил размер шрифта */
+    margin-bottom: 0.5rem; /* Увеличил отступ между пунктами */
+    /*line-height: 1.7; !* Увеличил межстрочный интервал *!*/
     position: relative;
-    padding-left: 2.5rem; /* Увеличил отступ для маркера */
+    padding-left: 2rem; /* Увеличил отступ для маркера */
 }
 
 /* Кастомные маркеры */
@@ -52,9 +52,9 @@
 /* Расположение контента */
 .about-content {
     display: flex;
-    flex-direction: row-reverse; /* Меняем порядок - теперь фото справа */
+    flex-direction: row-reverse;
     align-items: flex-start;
-    gap: 3rem;
+    /*gap: 3rem;*/
 }
 
 .about-text {
@@ -66,11 +66,11 @@
 
 .about-image {
     flex: 1;
-    text-align: left; /* Выравниваем фото по правому краю */
+    text-align: left;
 }
 
 .about-image img {
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
     border-radius: 4px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

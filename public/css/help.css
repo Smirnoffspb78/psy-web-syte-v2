@@ -5,7 +5,7 @@
 }
 
 .help-container {
-    max-width: 1400px; /* Максимальная ширина */
+    max-width: 1200px; /* Максимальная ширина */
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -14,7 +14,7 @@
     font-family: 'Lora', serif;
     font-weight: 400;
     color: #16511B;
-    font-size: 3rem;
+    font-size: 2.7rem;
     text-align: left;
     margin-bottom: 2rem;
 }
@@ -27,7 +27,7 @@
 .requests-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Ширина учитывает иконки */
-    gap: 1.5rem;
+    /*gap: 1.5rem;*/
     margin-bottom: 3rem;
 }
 
@@ -46,7 +46,7 @@
 .box-icon {
     flex: 0 0 50px; /* Фиксированная ширина */
     color: #1B5E20; /* Цвет иконок */
-    font-size: 2.3rem;
+    font-size: 2rem;
     padding-top: 0.3rem;
     transition: transform 0.3s ease; /* Анимация при наведении */
 }
@@ -57,7 +57,7 @@
     font-family: 'Lora', serif;
     color: black;
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 1.5;
 }
 
@@ -75,7 +75,7 @@
     font-family: 'Lora', serif;
     color: #16511B;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .requests-outro a {
