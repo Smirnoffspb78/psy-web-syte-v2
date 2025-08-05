@@ -55,3 +55,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Скрипт для разворачивания ответов
+function toggleAnswer(element) {
+    element.classList.toggle('active');
+
+    // Закрываем другие открытые вопросы
+    const allQuestions = document.querySelectorAll('.question-box');
+    allQuestions.forEach(question => {
+        if (question !== element && question.classList.contains('active')) {
+            question.classList.remove('active');
+        }
+    });
+}

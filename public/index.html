@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/help.css"/>
     <link rel="stylesheet" href="css/form-work.css"/>
     <link rel="stylesheet" href="css/response.css"/>
+    <link rel="stylesheet" href="css/questions.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -455,6 +456,122 @@
 
         <div class="slider-dots">
             <!-- Точки для навигации будут добавлены через JS -->
+        </div>
+    </div>
+</section>
+
+<section id="questions">
+    <div class="questions-container">
+        <h1>Часто задаваемые вопросы</h1>
+
+        <div class="questions-grid">
+            <!-- Вопрос 1 -->
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question-header">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Какой формат работы вы предлагаете?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    <p>Я предлагаю онлайн-консультации через Zoom, Яндекс Телемост, SaluteJazz и других видеоконференциях, которые могут для вас быть удобными.</p>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 -->
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question-header">
+                    <i class="fas fa-clock"></i>
+                    <h3>Сколько длится сессия?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    <p>Одна сессия с психологом длится 55 - 60 минут.</p>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 -->
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question-header">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Сколько нужно сессий?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    <p>Количество необходимых сессий может варьироваться в зависимости от ряда факторов, включая цели терапии, индивидуальные особенности, тип проблематики, регулярность сессий. Как правило, для достижения значительных изменений многие клиенты проходят от 5 до 15 сессий.</p>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 -->
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question-header">
+                    <i class="fas fa-calendar-plus"></i>
+                    <h3>Как записаться на консультацию?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    <p>Пока что сервис записи не работает, поэтому <a href="#contacts">свяжитесь</a> со мной любым удобным для вас способом. Совместно с вами выберем удобные для вас дату и время.</p>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 -->
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question-header">
+                    <i class="fas fa-calendar-week"></i>
+                    <h3>Могу ли я ходить к вам раз в месяц или каждый день?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    <p>Оптимальным для работы в психотерапии является интервал между сессиями 7 дней. Если сессии будут реже, то результат работы может быть менее эффективным. Исключением, для более частых встреч, является экстренная жизненная ситуация у Вас, например, смерть близких людей.</p>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 -->
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question-header">
+                    <i class="fas fa-calendar-times"></i>
+                    <h3>Что делать, если я не успеваю в назначенную дату и время?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    <p>Напишите мне заранее (не менее, чем за сутки) и мы перенесем сессию на удобное для Вас дату и время.</p>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 -->
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question-header">
+                    <i class="fas fa-user-slash"></i>
+                    <h3>Могу ли я записаться и не прийти?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    <p>Я не могу Вас заставить приходить на сессию, Вы приходите на нее по своей воле. Если вы не уведомляете или уведомляете менее, чем за сутки о том, что вы не придете, то я беру 50% от стоимости сессии в качестве компенсации.</p>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 -->
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question-header">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>А вы точно мне поможете?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    <p>Ответственность за результат лежит в равной степени на психологе и клиенте. Если клиент пропускает сессии, не выполняет домашние задания или нечестен с психологом, то психолог Вам не сможет помочь.</p>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 -->
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question-header">
+                    <i class="fas fa-heart"></i>
+                    <h3>Я боюсь рассказывать о ситуации, потому что боюсь осуждения.</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    <p>Я не даю оценку вашим действиям. Моя цель — создать безопасное пространство для исследования Вашего внутреннего мира, поддержки и роста. Я стремлюсь к тому, чтобы помочь Вам справляться с трудностями, находить гармонию и развивать свои ресурсы.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>

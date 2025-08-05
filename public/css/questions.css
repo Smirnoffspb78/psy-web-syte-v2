@@ -1,0 +1,117 @@
+/* Стили для раздела вопросов */
+#questions {
+    background-color: #124015; /* Темно-зеленый фон */
+    padding: 5rem 0;
+}
+
+.questions-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+#questions h1 {
+    font-family: 'Lora', serif;
+    color: white;
+    font-size: 2.7rem;
+    text-align: left;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.questions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.question-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.question-box:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.question-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-right: 2rem;
+}
+
+.question-header i {
+    color: white;
+    font-size: 1.5rem;
+    min-width: 30px;
+}
+
+.question-header h3 {
+    font-family: 'Lora', serif;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.toggle-icon {
+    position: absolute;
+    right: 0;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.answer p {
+    font-family: 'Lora', serif;
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+    padding-top: 1rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.answer a {
+    color: #FFD700;
+    text-decoration: underline;
+}
+
+/* Активное состояние (развернутый ответ) */
+.question-box.active .toggle-icon {
+    transform: rotate(45deg);
+}
+
+.question-box.active .answer {
+    max-height: 500px; /* Достаточно для любого ответа */
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .questions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #questions h1 {
+        font-size: 2.5rem;
+    }
+
+    .question-header h3 {
+        font-size: 1.2rem;
+    }
+}
