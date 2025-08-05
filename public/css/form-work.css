@@ -45,13 +45,17 @@
 
 .form-box-content p {
     font-family: 'Lora', serif;
-    color: #333;
-    font-size: 1.1rem;
+    color: #1B5E20;
+    font-weight: 400;
+    font-size: 1.7rem;
     line-height: 1.7;
     margin-bottom: 1rem;
 }
 
 .form-box ul {
+    color: #1B5E20;
+    font-weight: 400;
+    font-size: 1.3rem;
     list-style-type: none;
     padding-left: 1.5rem;
     margin-bottom: 1.5rem;
@@ -60,7 +64,8 @@
 .form-box li {
     font-family: 'Lora', serif;
     color: #16511B;
-    font-size: 1.1rem;
+    font-weight: 400;
+    font-size: 1.5rem;
     margin-bottom: 0.8rem;
     position: relative;
     padding-left: 1.5rem;
@@ -80,21 +85,26 @@
 .price-item h3 {
     font-family: 'Lora', serif;
     color: #16511B;
-    font-size: 1.3rem;
-    margin-bottom: 0.3rem;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin-bottom: 0.8rem;
+    position: relative;
 }
 
 .price-item p {
     font-family: 'Lora', serif;
-    color: #1B5E20;
-    font-size: 1.2rem;
+    color: #16511B;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
 .conditions {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
+    font-family: 'Lora', serif;
+    color: #16511B;
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    position: relative;
     border-top: 1px dashed #DDD;
 }
 
