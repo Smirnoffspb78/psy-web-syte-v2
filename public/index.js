@@ -68,3 +68,46 @@ function toggleAnswer(element) {
         }
     });
 }
+
+
+// Исправленный JavaScript для модального окна
+let currentImageIndex = 0;
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modal-image');
+
+// Получаем все элементы изображений из галереи
+const galleryImages = document.querySelectorAll('.image-gallery img');
+const images = Array.from(galleryImages).map(img => img.src);
+
+function openModal(index) {
+    currentImageIndex = index;
+    modal.style.display = "block";
+    modalImg.src = images[index];
+    document.body.style.overflow = "hidden";
+}
+
+function closeModal(e) {
+    if (e.target.classList.contains('modal') || e.target.classList.contains('close')) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+}
+
+function changeImage(step, e) {
+    e.stopPropagation();
+    currentImageIndex = (currentImageIndex + step + images.length) % images.length;
+    modalImg.src = images[currentImageIndex];
+}
+
+// Закрытие по ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === "Escape" && modal.style.display === "block") {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+});
+
+// Добавляем обработчики для всех изображений
+galleryImages.forEach((img, index) => {
+    img.addEventListener('click', () => openModal(index));
+});
