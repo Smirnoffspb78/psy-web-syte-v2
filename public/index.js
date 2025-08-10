@@ -111,3 +111,23 @@ document.addEventListener('keydown', function(e) {
 galleryImages.forEach((img, index) => {
     img.addEventListener('click', () => openModal(index));
 });
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault(); // Отменяем стандартное поведение
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            // Плавная прокрутка к элементу
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start' // 'start', 'center', 'end' или 'nearest'
+            });
+
+            // Если нужно обновить URL без перезагрузки (опционально)
+            history.pushState(null, null, targetId);
+        }
+    });
+});
