@@ -33,7 +33,7 @@
     color: #16511B; /* Новый цвет - глубокий зелено-серый */
     font-size: 1.3rem; /* Увеличил размер шрифта */
     margin-bottom: 0.5rem; /* Увеличил отступ между пунктами */
-    /*line-height: 1.7; !* Увеличил межстрочный интервал *!*/
+    line-height: 1.2; /* Увеличил межстрочный интервал */
     position: relative;
     padding-left: 2rem; /* Увеличил отступ для маркера */
 }
@@ -46,6 +46,19 @@
     position: absolute;
     left: 0;
     top: 0.2rem;
+}
+
+.about-text li a {
+    color: #1B5E20; /* Тёмно-зелёный (как у текста) */
+    text-decoration: none; /* Убираем стандартное подчёркивание */
+    border-bottom: 1px solid rgba(22, 81, 27, 0.3); /* Тонкая линия с прозрачностью */
+    transition: all 0.3s ease; /* Плавный эффект при наведении */
+    padding-bottom: 2px; /* Отступ между текстом и линией */
+}
+
+.about-text li a:hover {
+    color: #2a8a3a; /* Светло-зелёный при наведении */
+    border-bottom-color: rgba(42, 138, 58, 0.6); /* Линия становится ярче */
 }
 
 

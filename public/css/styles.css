@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+footer.main-footer {
+    background: #124015;
+    color: white;
+    text-align: center;
+}
+
+
