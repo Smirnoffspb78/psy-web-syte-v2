@@ -85,6 +85,17 @@ header.main-header .tagline {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Измените стиль .buttons-wrapper */
+.buttons-wrapper {
+    display: flex;
+    justify-content: flex-start; /* Выравниваем содержимое по левому краю */
+    flex-wrap: wrap; /* Разрешаем перенос на новую строку при необходимости */
+    gap: 15px; /* Расстояние между кнопками */
+    margin-top: 2rem;
+}
+
+
+
 /* Навигационное меню */
 .header-nav {
     position: fixed;
@@ -156,6 +167,12 @@ header.main-header .tagline {
     z-index: 1001;
 }
 
+/* Анимация скрытия меню при прокрутке */
+.header-nav.hidden {
+    transform: translateY(-100%);
+    box-shadow: none;
+}
+
 /* Адаптивность */
 @media (max-width: 992px) {
     .header-nav li a {
@@ -213,8 +230,14 @@ header.main-header .tagline {
     }
 }
 
-/* Анимация скрытия меню при прокрутке */
-.header-nav.hidden {
-    transform: translateY(-100%);
-    box-shadow: none;
+@media (max-width: 768px) {
+    .buttons-wrapper {
+        flex-direction: column; /* На мобильных - одна под другой */
+        align-items: flex-start; /* Выравниваем по левому краю */
+    }
+
+    .cta-button,
+    .more-button {
+        width: auto; /* Возвращаем естественную ширину */
+    }
 }
