@@ -1,52 +1,43 @@
 document.addEventListener('DOMContentLoaded', function() {
     // ===== Функционал скрытия меню при прокрутке =====
-    const headerNav = document.querySelector('.header-nav');
-    let lastScroll = 0;
-    const scrollThreshold = 100; // Пикселей для начала скрытия
-    const hideShowDelay = 200; // Задержка в мс для плавности
-
-    if (headerNav) {
-        let scrollTimeout;
-
-        window.addEventListener('scroll', function() {
-            const currentScroll = window.pageYOffset;
-
-            clearTimeout(scrollTimeout);
-
-            if (currentScroll > lastScroll && currentScroll > scrollThreshold) {
-                // Прокрутка вниз - скрываем
-                scrollTimeout = setTimeout(() => {
-                    headerNav.classList.add('hidden');
-                    headerNav.style.transition = 'transform 0.3s ease-out';
-                }, hideShowDelay);
-            } else if (currentScroll < lastScroll) {
-                // Прокрутка вверх - показываем
-                scrollTimeout = setTimeout(() => {
-                    headerNav.classList.remove('hidden');
-                    headerNav.style.transition = 'transform 0.3s ease-out';
-                }, hideShowDelay);
-            }
-
-            lastScroll = currentScroll;
-        });
-    }
-
-    // ===== Бургер-меню =====
+    // ===== Функционал меню =====
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
+    const headerNav = document.querySelector('.header-nav');
+    let lastScroll = 0;
 
-    if (menuToggle && navMenu) {
+    // Бургер-меню
+    if (menuToggle) {
         menuToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
         });
+    }
 
-        // Закрытие меню при клике на ссылку
+    // Закрытие меню при клике на ссылку
+    if (navMenu) {
         document.querySelectorAll('#nav-menu a').forEach(link => {
             link.addEventListener('click', function() {
                 navMenu.classList.remove('active');
             });
         });
     }
+
+    // Скрытие/показ меню при прокрутке
+    window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset;
+
+        if (headerNav) {
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                // Прокрутка вниз - скрываем
+                headerNav.classList.add('hidden');
+            } else if (currentScroll < lastScroll) {
+                // Прокрутка вверх - показываем
+                headerNav.classList.remove('hidden');
+            }
+        }
+
+        lastScroll = currentScroll;
+    });
 
     const track = document.querySelector('.reviews-track');
     const dotsContainer = document.querySelector('.slider-dots');
