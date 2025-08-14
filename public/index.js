@@ -1,4 +1,53 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // ===== Функционал скрытия меню при прокрутке =====
+    const headerNav = document.querySelector('.header-nav');
+    let lastScroll = 0;
+    const scrollThreshold = 100; // Пикселей для начала скрытия
+    const hideShowDelay = 200; // Задержка в мс для плавности
+
+    if (headerNav) {
+        let scrollTimeout;
+
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+
+            clearTimeout(scrollTimeout);
+
+            if (currentScroll > lastScroll && currentScroll > scrollThreshold) {
+                // Прокрутка вниз - скрываем
+                scrollTimeout = setTimeout(() => {
+                    headerNav.classList.add('hidden');
+                    headerNav.style.transition = 'transform 0.3s ease-out';
+                }, hideShowDelay);
+            } else if (currentScroll < lastScroll) {
+                // Прокрутка вверх - показываем
+                scrollTimeout = setTimeout(() => {
+                    headerNav.classList.remove('hidden');
+                    headerNav.style.transition = 'transform 0.3s ease-out';
+                }, hideShowDelay);
+            }
+
+            lastScroll = currentScroll;
+        });
+    }
+
+    // ===== Бургер-меню =====
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+
+        // Закрытие меню при клике на ссылку
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+
     const track = document.querySelector('.reviews-track');
     const dotsContainer = document.querySelector('.slider-dots');
     const reviews = document.querySelectorAll('.review-box');
