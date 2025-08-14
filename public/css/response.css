@@ -1,0 +1,170 @@
+/* Стили для слайдера отзывов */
+#reviews {
+    background-color: #FDF4E7;
+    padding: 5rem 0;
+    overflow: hidden;
+}
+
+.reviews-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+#reviews h1 {
+    font-family: 'Lora', serif;
+    color: #16511B;
+    font-size: 2.7rem;
+    text-align: left;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.reviews-slider {
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Обновленные стили для слайдера */
+.reviews-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 2rem;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.review-box {
+    width: calc(33.333% - 1.33rem); /* Фиксированная ширина для 3 колонок */
+    min-width: calc(33.333% - 1.33rem); /* Запрет на уменьшение */
+    max-width: calc(33.333% - 1.33rem); /* Запрет на увеличение */
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    flex-shrink: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-text {
+    flex-grow: 1; /* Растягиваем текст на всю доступную высоту */
+    overflow: hidden; /* Скрываем выход текста за пределы */
+}
+
+.review-text p {
+    font-family: 'Lora', serif;
+    color: #1B5E20;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 7; /* Ограничиваем количество строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.7);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: #1B5E20;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.prev-btn {
+    left: -25px;
+}
+
+.next-btn {
+    right: -25px;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 0.5rem;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #D8D8D8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-dot.active {
+    background: #1B5E20;
+}
+
+/* Стили для содержимого отзывов */
+.stars {
+    color: #FFD700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.review-text p {
+    font-family: 'Lora', serif;
+    color: #1B5E20;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.review-author {
+    font-family: 'Lora', serif;
+    color: #000;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 1024px) {
+    .review-box {
+        min-width: calc(50% - 1rem);
+    }
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .review-box {
+        min-width: 100%;
+    }
+
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .prev-btn {
+        left: -15px;
+    }
+
+    .next-btn {
+        right: -15px;
+    }
+}

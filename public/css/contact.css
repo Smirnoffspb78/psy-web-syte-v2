@@ -1,0 +1,124 @@
+/* Обертка для фона на всю ширину */
+#contacts-wrapper {
+    width: 100%;
+    padding: 80px 0;
+    background-color: #F8F1E7; /* Светло-кремовый фон */
+}
+
+/* Основной контейнер с ограничением ширины */
+#contacts {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Контейнер для двухколоночного расположения */
+.contacts-content {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Левая часть - контакты */
+.contacts-info {
+    flex: 1;
+}
+
+/* Правая часть - фото */
+.contacts-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.contacts-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Стили заголовка и текста */
+#contacts h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.7rem;
+    color: #16511B;
+    text-align: left;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+
+.contact-description {
+    font-family: 'Lora', serif;
+    font-size: 1.3rem;
+    color: #16511B;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+}
+
+/* Стили для контактных ссылок */
+.contact-links {
+    font-family: 'Lora', serif;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    max-width: 800px;
+}
+
+.contact-link {
+    color: #123216; /* Темно-зеленый */
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0 5px;
+}
+
+.contact-link:hover {
+    color: #0D2410; /* Еще темнее зеленый */
+    text-decoration-thickness: 3px;
+    background-color: rgba(210, 180, 140, 0.1); /* Светлый кремовый фон при наведении */
+}
+
+.link-separator {
+    color: #D4A76A;
+    margin: 0 10px;
+    font-weight: 300;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    #contacts {
+        padding: 0 25px;
+    }
+
+    .contacts-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contacts-image {
+        order: -1;
+        margin-bottom: 40px;
+    }
+
+    .contacts-image img {
+        max-width: 300px;
+    }
+
+    #contacts h1 {
+        font-size: 2.4rem;
+    }
+
+    .contact-description {
+        font-size: 1.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .contact-links {
+        font-size: 1.1rem;
+    }
+}

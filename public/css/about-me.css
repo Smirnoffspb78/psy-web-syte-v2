@@ -1,0 +1,108 @@
+/* Общие стили секции */
+#about-me {
+    background-color: #FDF4E7  ; /* Кремовый фон */
+    padding: 5rem 0;
+}
+
+.container-about-me {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+/* Стили заголовка */
+.section-title {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #16511B;
+    font-size: 2.7rem;
+    text-align: left;
+    margin-bottom: 2rem;
+    padding-left: 0;
+    letter-spacing: 1px;
+}
+
+/* Стили списка */
+.about-text ul {
+    list-style-type: none;
+    /*padding-left: 2rem; !* Увеличил отступ списка *!*/
+}
+
+.about-text li {
+    font-family: 'Lora', serif;
+    color: #16511B; /* Новый цвет - глубокий зелено-серый */
+    font-size: 1.3rem; /* Увеличил размер шрифта */
+    margin-bottom: 0.5rem; /* Увеличил отступ между пунктами */
+    line-height: 1.2; /* Увеличил межстрочный интервал */
+    position: relative;
+    padding-left: 2rem; /* Увеличил отступ для маркера */
+}
+
+/* Кастомные маркеры */
+.about-text li:before {
+    content: "★";
+    color: #1B5E20; /* Цвет маркера */
+    font-size: 1.1rem; /* Размер маркера */
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+}
+
+.about-text li a {
+    color: #1B5E20; /* Тёмно-зелёный (как у текста) */
+    text-decoration: none; /* Убираем стандартное подчёркивание */
+    border-bottom: 1px solid rgba(22, 81, 27, 0.3); /* Тонкая линия с прозрачностью */
+    transition: all 0.3s ease; /* Плавный эффект при наведении */
+    padding-bottom: 2px; /* Отступ между текстом и линией */
+}
+
+.about-text li a:hover {
+    color: #2a8a3a; /* Светло-зелёный при наведении */
+    border-bottom-color: rgba(42, 138, 58, 0.6); /* Линия становится ярче */
+}
+
+
+/* Расположение контента */
+.about-content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    /*gap: 3rem;*/
+}
+
+.about-text {
+    text-align: justify; /* Выравнивание по ширине */
+    hyphens: auto; /* Перенос слов при необходимости */
+    text-justify: inter-word; /* Оптимальное выравнивание */
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    text-align: left;
+}
+
+.about-image img {
+    max-width: 75%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили списка (оставляем как было) */
+.about-text ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}

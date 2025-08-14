@@ -1,0 +1,153 @@
+#education-wrapper {
+    background-color: #FDF4E7; /* Кремовый фон на всю ширину */
+    width: 100%;
+    padding: 40px 0; /* Вертикальные отступы */
+}
+
+#education {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.section-text h2 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #16511B;
+    font-size: 2.7rem;
+    text-align: left;
+    margin-bottom: 2rem;
+    padding-left: 0;
+    letter-spacing: 1px;
+}
+
+.education-description {
+    font-family: 'Lora', serif;
+    color: #16511B; /* Новый цвет - глубокий зелено-серый */
+    font-size: 1.3rem; /* Увеличил размер шрифта */
+    margin-bottom: 0.5rem; /* Увеличил отступ между пунктами */
+    font-weight: 400;
+    /*line-height: 1.7; !* Увеличил межстрочный интервал *!*/
+    position: relative;
+    text-align: justify; /* Выравнивание по ширине */
+    text-justify: inter-word; /* Для лучшего распределения слов */
+    padding-left: 2rem; /* Увеличил отступ для маркера */
+}
+
+.education-container {
+    font-family: 'Lora', serif;
+    position: relative;
+    padding-left: 30px;
+    color: #16511B; /* Новый цвет - глубокий зелено-серый */
+    font-weight: 400;
+    font-size: 1.1rem; /* Увеличил размер шрифта */
+}
+
+.education-item {
+    position: relative;
+    margin-bottom: 20px;
+    border-left: 4px solid #D4A76A; /* Темно-кремовая линия */
+    padding: 15px 0 15px 20px;
+    transform: translateX(calc(-15px * var(--i)));
+}
+
+.education-item:nth-child(1) { --i: 0; }
+.education-item:nth-child(2) { --i: 1; }
+.education-item:nth-child(3) { --i: 2; }
+.education-item:nth-child(4) { --i: 3; }
+
+.year-marker {
+    display: inline-block;
+    background-color: #16511B;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.image-item img {
+    max-width: 200px;
+    max-height: 150px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: transform 0.3s;
+    object-fit: contain;
+}
+
+.image-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Стили модального окна */
+/* Исправленные стили модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000; /* Увеличиваем z-index */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    overflow: auto;
+}
+
+.modal-content {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s;
+    user-select: none;
+    z-index: 1001;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
