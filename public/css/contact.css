@@ -122,3 +122,48 @@
         font-size: 1.1rem;
     }
 }
+
+@media (max-width: 768px) {
+    #contacts {
+        padding: 0 25px;
+    }
+
+    /* Главное изменение - правильный порядок flex-элементов */
+    .contacts-content {
+        flex-direction: column;
+        gap: 40px;
+        display: flex; /* Явно указываем flex */
+    }
+
+    /* УБИРАЕМ order: -1 и добавляем нормальный порядок */
+    .contacts-info {
+        order: 1; /* Контакты будут первыми */
+    }
+
+    .contacts-image {
+        order: 2; /* Фото будет после контактов */
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+
+    /* Остальные стили */
+    .contacts-image img {
+        max-width: 300px;
+    }
+
+    #contacts h1 {
+        font-size: 2.4rem;
+        text-align: center;
+    }
+
+    .contact-description {
+        font-size: 1.2rem;
+        margin-bottom: 2.5rem;
+        text-align: center;
+    }
+
+    .contact-links {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
