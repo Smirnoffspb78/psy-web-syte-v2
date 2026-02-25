@@ -52,11 +52,6 @@
     transform: translateX(calc(-15px * var(--i)));
 }
 
-.education-item:nth-child(1) { --i: 0; }
-.education-item:nth-child(2) { --i: 1; }
-.education-item:nth-child(3) { --i: 2; }
-.education-item:nth-child(4) { --i: 3; }
-
 .year-marker {
     display: inline-block;
     background-color: #16511B;
