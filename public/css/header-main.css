@@ -113,7 +113,6 @@ header.main-header .tagline {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin: 0;
     padding: 0;
     max-width: 1200px;
     margin: 0 auto;
@@ -248,7 +247,8 @@ header.main-header .tagline {
     }
 
     .cta-button,
-    .more-button {
+    .more-button,
+    .survey-btn{
         padding: 12px 24px;
         font-size: 1.1rem;
     }
@@ -261,7 +261,8 @@ header.main-header .tagline {
     }
 
     .cta-button,
-    .more-button {
+    .more-button,
+    .survey-btn{
         width: auto; /* Возвращаем естественную ширину */
     }
 }
