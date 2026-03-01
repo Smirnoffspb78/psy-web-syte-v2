@@ -173,6 +173,30 @@ header.main-header .tagline {
     box-shadow: none;
 }
 
+/* Кнопка открытия модальной анкеты */
+.survey-btn {
+    display: inline-block; /* как у ссылок */
+    background-color: #16511B; /* как у cta-button */
+    color: white;
+    padding: 14px 28px;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    border: none; /* убрать стандартный бордер кнопки */
+    border-radius: 0;
+    text-decoration: none; /* убрать подчеркивание */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1.5px;
+    margin-top: 1rem;
+}
+
+.survey-btn:hover {
+    background-color: #2a6b54; /* как у cta-button:hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
 /* Адаптивность */
 @media (max-width: 992px) {
     .header-nav li a {
