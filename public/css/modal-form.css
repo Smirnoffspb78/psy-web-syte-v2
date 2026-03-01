@@ -1,0 +1,130 @@
+
+/* Затемнение */
+#survey-modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+/* Контейнер формы */
+.survey-content {
+    background: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+/* Крестик */
+.survey-close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* Поля */
+#survey-form input,
+#survey-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Контейнер кнопок */
+.form-actions {
+    display: flex;
+    gap: 15px; /* расстояние между кнопками */
+    margin-top: 20px;
+    justify-content: flex-end; /* кнопки справа */
+}
+
+/* Общий стиль для кнопок */
+.form-actions button {
+    padding: 10px 25px; /* меньше горизонтальные отступы */
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 120px; /* минимальная ширина для удобства */
+}
+
+/* Кнопка "Отправить" */
+.form-actions button[type="submit"] {
+    background-color: #4CAF50;
+}
+
+.form-actions button[type="submit"]:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Кнопка "Отмена" */
+.form-actions .cancel-btn {
+    background-color: #999;
+}
+
+.form-actions .cancel-btn:hover {
+    background-color: #777;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Адаптация модального окна под мобильные устройства */
+@media (max-width: 768px) {
+    /* Модальное окно занимает почти весь экран */
+    .survey-content {
+        width: 95%;
+        margin: 3% auto;
+        padding: 20px;
+        max-height: 95vh;
+        border-radius: 15px; /* чуть меньше скругление для маленьких экранов */
+    }
+
+    /* Крестик чуть меньше */
+    .survey-close {
+        font-size: 22px;
+        right: 15px;
+        top: 10px;
+    }
+
+    /* Поля ввода чуть больше, чтобы удобнее тапать */
+    #survey-form input,
+    #survey-form textarea {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    /* Кнопки */
+    .form-actions {
+        flex-direction: column; /* кнопки друг под другом */
+        gap: 12px;
+        justify-content: center;
+        align-items: stretch; /* растягиваем по ширине формы */
+    }
+
+    .form-actions button {
+        width: 100%; /* кнопка на всю ширину */
+        min-width: unset; /* убираем минимальную ширину */
+        padding: 14px 0;
+        font-size: 16px;
+    }
+}

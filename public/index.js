@@ -171,3 +171,59 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+function openSurvey() {
+    document.getElementById("survey-modal").style.display = "block";
+}
+
+function closeSurvey() {
+    document.getElementById("survey-modal").style.display = "none";
+}
+
+// Инициализация EmailJS
+emailjs.init("6I3OXO8du6aLz7NRe"); // вставь сюда Public Key
+
+document.getElementById("survey-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // блокируем стандартную отправку
+
+    // Получаем значения полей
+    const q1 = this.q1.value.trim();
+    const q2 = this.q2.value.trim();
+    const q3 = this.q3.value.trim();
+    const q4 = this.q4.value.trim();
+    const q5 = this.q5.value.trim();
+
+    // Проверка на заполненность
+    if (!q1 || !q2 || !q3 || !q4 || !q5) {
+        alert("Пожалуйста, заполните все поля анкеты!");
+        return;
+    }
+
+    // Проверка возраста
+    const age = parseInt(q2, 10);
+    if (isNaN(age) || age <= 0) {
+        alert("Пожалуйста, укажите корректный возраст (число больше нуля).");
+        return;
+    }
+
+    // Если все проверки пройдены — отправляем форму
+    emailjs.sendForm(
+        "psy-site-service-19076",      // Service ID
+        "template_v0nhgb4",     // Template ID
+        this
+    )
+        .then(function() {
+            alert("Анкета успешно отправлена!");
+            // Закрываем модальное окно
+            document.getElementById("survey-modal").style.display = "none";
+            // Очищаем форму
+            document.getElementById("survey-form").reset();
+        }, function(error) {
+            const goToTelegram = confirm(
+                "Ошибка отправки. Напишите мне напрямую в Telegram: https://t.me/Lmila_psy"
+            );
+            if (goToTelegram) {
+                window.open("https://t.me/Lmila_psy", "_blank");
+            }
+        });
+});
