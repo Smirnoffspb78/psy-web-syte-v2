@@ -181,7 +181,7 @@ function closeSurvey() {
 }
 
 // Инициализация EmailJS
-emailjs.init("6I3OXO8du6aLz7NRe"); // вставь сюда Public Key
+emailjs.init("O75cUJ6Ny8SSj_rBn"); // вставь сюда Public Key
 
 document.getElementById("survey-form").addEventListener("submit", function(event) {
     event.preventDefault(); // блокируем стандартную отправку
