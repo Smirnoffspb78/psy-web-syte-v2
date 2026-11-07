@@ -2,11 +2,10 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
-const siteUrl = process.env.SITE_URL;
-
-if (!siteUrl) {
-    throw new Error('Environment variable SITE_URL is required');
-}
+const siteUrl = process.env.SITE_URL
+    || (process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : 'https://postnikovalyudmila.tuqo.app');
 
 const url = new URL(siteUrl);
 
