@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://postnikovalyudmila.vercel.app/sitemap.xml
